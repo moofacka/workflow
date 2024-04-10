@@ -1,1 +1,8 @@
+name: reusable
+run-name: reusable-${{ github.run_id }}
 
+on:
+  workflow_call:
+    inputs:
+      name:
+      
