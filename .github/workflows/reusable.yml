@@ -34,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Create servername'
+        id: name
         shell: pwsh
         run: |
           $Name = "${{ github.event.inputs.name }}"
@@ -45,4 +46,4 @@ jobs:
           }
           "serverName=$($Output)" >> $env:GITHUB_OUTPUT
     outputs:
-      serverName: ${{ steps.set.outputs.serverName }}
+      serverName: ${{ steps.name.outputs.serverName }}
