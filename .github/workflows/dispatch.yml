@@ -31,6 +31,6 @@ jobs:
           echo "name: ${{ github.event.inputs.name }}"
   build:
     needs: context
-    uses: moofacka/workflow/.github/workflows/reusable.yaml@main
+    uses: moofacka/workflow/.github/workflows/reusable.yml@main
     with:
         name: ${{ github.event.inputs.name }}
