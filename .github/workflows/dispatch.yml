@@ -1,1 +1,31 @@
+name: dispatch
+run-name: dispatch-${{ github.run_id }}
 
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        required: false
+        type: string
+        description: 'Name of the server'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  context:
+    name: Context
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show default environment variables
+        run: |
+          echo "job_id: $GITHUB_JOB"
+          echo "action_id: $GITHUB_ACTION"
+          echo "run_id: $GITHUB_RUN_ID"
+          echo "actor: $GITHUB_ACTOR"
+          echo "sha: $GITHUB_SHA"
+      - name: Show workflow parameter input
+        run: |
+          echo "name: ${{ github.event.inputs.name }}"
