@@ -9,7 +9,7 @@ on:
         type: string
         description: 'Name of the server'
     outputs:
-      name:
+      serverName:
         description: "Name of the server"
         value: ${{ jobs.generate.outputs.serverName }}
 
