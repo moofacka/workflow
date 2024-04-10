@@ -8,6 +8,10 @@ on:
         required: false
         type: string
         description: 'Name of the server'
+    outputs:
+      name:
+        description: "Name of the server"
+        value: ${{ jobs.generate.outputs.serverName }}
 
 permissions:
   contents: read
@@ -16,7 +20,7 @@ permissions:
 
 jobs:
   context:
-    name: Context for reusable-${{ github.run_id }}
+    name: Get context
     runs-on: ubuntu-latest
     steps:
       - name: Show default environment variables
@@ -29,12 +33,14 @@ jobs:
       - name: Show workflow parameter input
         run: |
           echo "name: ${{ github.event.inputs.name }}"
-  build:
-    name: Build for reusable-${{ github.run_id }}
+  generate:
+    name: Generate output
     runs-on: ubuntu-latest
+    outputs:
+      serverName: ${{ steps.step1.outputs.serverName }}
     steps:
       - name: 'Create servername'
-        id: name
+        id: step1
         shell: pwsh
         run: |
           $Name = "${{ github.event.inputs.name }}"
@@ -45,5 +51,3 @@ jobs:
               $Output = "sqlsrv$($Number)-pentest01-dev"
           }
           "serverName=$($Output)" >> $env:GITHUB_OUTPUT
-    outputs:
-      serverName: ${{ steps.name.outputs.serverName }}
