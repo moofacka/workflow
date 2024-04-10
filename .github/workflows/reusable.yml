@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   context:
-    name: Context
+    name: Context for reusable-${{ github.run_id }}
     runs-on: ubuntu-latest
     steps:
       - name: Show default environment variables
@@ -30,7 +30,7 @@ jobs:
         run: |
           echo "name: ${{ github.event.inputs.name }}"
   build:
-    name: Build
+    name: Build for reusable-${{ github.run_id }}
     runs-on: ubuntu-latest
     steps:
       - name: 'Create servername'
