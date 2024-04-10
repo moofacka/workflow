@@ -36,7 +36,7 @@ jobs:
       - name: 'Create servername'
         shell: pwsh
         run: |
-          $Name = ConvertFrom-Json ${{ github.event.inputs.name }}
+          $Name = "${{ github.event.inputs.name }}"
           $Number = "01"
           if ($Name) {
               $Output = "$($Name.ToLower())$($Number)-pentest01-dev"
