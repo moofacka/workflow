@@ -29,3 +29,8 @@ jobs:
       - name: Show workflow parameter input
         run: |
           echo "name: ${{ github.event.inputs.name }}"
+  build:
+    needs: context
+    uses: moofacka/workflow/.github/workflows/reusable.yaml@main
+    with:
+        name: ${{ github.event.inputs.name }}
