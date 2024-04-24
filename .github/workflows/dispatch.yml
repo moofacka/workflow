@@ -38,6 +38,6 @@ jobs:
   result:
     name: Run reusable-2.yml
     needs: context
-    uses: moofacka/workflow/.github/workflows/reusable-2.yml@main
+    uses: moofacka/workflow/.github/workflows/resuable-result.yml@main
     with:
       name: ${{ needs.build.outputs.serverName }}
