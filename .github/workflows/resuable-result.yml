@@ -33,4 +33,4 @@ jobs:
           echo "sha: $GITHUB_SHA"
       - name: Show workflow parameter input
         run: |
-          echo sName: ${{ inputs.sName }}"
+          echo "sName: ${{ inputs.sName }}"
