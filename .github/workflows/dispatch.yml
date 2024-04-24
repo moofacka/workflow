@@ -37,7 +37,7 @@ jobs:
       name: ${{ github.event.inputs.name }}
   result:
     name: Run reusable-2.yml
-    needs: context
+    needs: build
     uses: moofacka/workflow/.github/workflows/resuable-result.yml@main
     with:
       name: ${{ needs.build.outputs.serverName }}
