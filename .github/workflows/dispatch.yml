@@ -40,4 +40,4 @@ jobs:
     needs: context
     uses: ./.github/workflows/reusable-2.yml
     with:
-        name: ${{ needs.build.outputs.serverName }}
+      name: ${{ needs.build.outputs.serverName }}
