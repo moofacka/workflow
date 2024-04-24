@@ -34,7 +34,7 @@ jobs:
     needs: context
     uses: ./.github/workflows/reusable-1.yml
     with:
-        name: ${{ github.event.inputs.name }}
+      name: ${{ github.event.inputs.name }}
   result:
     name: Run reusable-2.yml
     needs: context
