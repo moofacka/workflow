@@ -32,12 +32,12 @@ jobs:
   build:
     name: Run reusable-1.yml
     needs: context
-    uses: ./.github/workflows/reusable-1.yml
+    uses: moofacka/workflow/.github/workflows/reusable-1.yml@main
     with:
       name: ${{ github.event.inputs.name }}
   result:
     name: Run reusable-2.yml
     needs: context
-    uses: ./.github/workflows/reusable-2.yml
+    uses: moofacka/workflow/.github/workflows/reusable-2.yml@main
     with:
       name: ${{ needs.build.outputs.serverName }}
