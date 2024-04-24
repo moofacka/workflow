@@ -30,16 +30,14 @@ jobs:
         run: |
           echo "name: ${{ github.event.inputs.name }}"
   build:
-    name: Run reusable.yml
+    name: Run reusable-1.yml
     needs: context
     uses: ./.github/workflows/reusable-1.yml
     with:
         name: ${{ github.event.inputs.name }}
   result:
-    name: Result
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show workflow parameter input
-        run: |
-          echo "name: ${{ needs.build.outputs.serverName }}"
+    name: Run reusable-2.yml
+    needs: context
+    uses: ./.github/workflows/reusable-2.yml
+    with:
+        name: ${{ needs.build.outputs.serverName }}
