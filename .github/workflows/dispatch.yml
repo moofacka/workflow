@@ -40,4 +40,4 @@ jobs:
     needs: build
     uses: moofacka/workflow/.github/workflows/resuable-result.yml@main
     with:
-      name: ${{ needs.build.outputs.serverName }}
+      sName: ${{ needs.build.outputs.serverName }}
