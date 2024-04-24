@@ -4,13 +4,13 @@ run-name: reusable-2-${{ github.run_id }}
 on:
   workflow_dispatch:
     inputs:
-      name:
+      sName:
         required: false
         type: string
         description: 'Name of the server'
   workflow_call:
     inputs:
-      name:
+      sName:
         required: false
         type: string
 
@@ -33,4 +33,4 @@ jobs:
           echo "sha: $GITHUB_SHA"
       - name: Show workflow parameter input
         run: |
-          echo "name: ${{ github.event.inputs.name }}"
+          echo "name: ${{ github.event.inputs.sName }}"
