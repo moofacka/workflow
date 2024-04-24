@@ -1,5 +1,5 @@
-name: reusable
-run-name: reusable-${{ github.run_id }}
+name: reusable-1
+run-name: reusable-1-${{ github.run_id }}
 
 on:
   workflow_call:
