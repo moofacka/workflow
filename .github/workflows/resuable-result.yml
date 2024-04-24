@@ -13,7 +13,6 @@ on:
       name:
         required: false
         type: string
-        description: 'Name of the server'
 
 permissions:
   contents: read
