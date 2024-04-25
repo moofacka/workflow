@@ -1,0 +1,27 @@
+name: environment
+run-name: environment-${{ github.run_id }}
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  environment:
+    name: Environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show default environment variables
+        run: |
+          echo "job_id: $GITHUB_JOB"
+          echo "action_id: $GITHUB_ACTION"
+          echo "run_id: $GITHUB_RUN_ID"
+          echo "actor: $GITHUB_ACTOR"
+          echo "sha: $GITHUB_SHA"
+          echo "branch: ${{ github.ref_name }}"
+      - name: Show workflow parameter input
+        run: |
+          echo "name: ${{ github.event.inputs.name }}"
