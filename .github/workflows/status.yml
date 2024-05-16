@@ -12,8 +12,4 @@ jobs:
       - name: 'Write summary'
         shell: pwsh
         run: |
-          Write-Output "This is the lead in sentence for the list" >> $env:GITHUB_STEP_SUMMARY
-          Write-Output "" >> $env:GITHUB_STEP_SUMMARY # this is a blank line
-          Write-Output "- Lets add a bullet point" >> $env:GITHUB_STEP_SUMMARY
-          Write-Output "- Lets add a second bullet point" >> $env:GITHUB_STEP_SUMMARY
-          Write-Output "- How about a third one?" >> $env:GITHUB_STEP_SUMMARY
+          ./pwsh/summary-example.ps1
