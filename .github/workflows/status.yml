@@ -12,4 +12,4 @@ jobs:
       - name: 'Write summary'
         shell: pwsh
         run: |
-          ./pwsh/summary-example.ps1
+          .\pwsh\summary-example.ps1
