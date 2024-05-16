@@ -12,4 +12,4 @@ jobs:
       - name: 'Write summary'
         shell: pwsh
         run: |
-          Write-Output "### Summary" >> $GITHUB_STEP_SUMMARY
+          echo "### Summary" >> $GITHUB_STEP_SUMMARY
