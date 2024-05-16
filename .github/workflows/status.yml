@@ -9,7 +9,7 @@ jobs:
     name: Summary
     runs-on: ubuntu-latest
     steps:
-      - name: 'Write summary'
+      - uses: actions/checkout@v4
+      - name: Script
         shell: pwsh
-        run: |
-          .\pwsh\summary-example.ps1
+        run: ./pwsh/summary-example.ps1
