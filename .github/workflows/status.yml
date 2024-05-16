@@ -6,7 +6,7 @@ on:
 
 jobs:
   summary:
-    name: Summary
+    name: Workflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
