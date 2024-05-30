@@ -1,5 +1,10 @@
 name: Windows PowerShell
+run-name: windows-powershell_${{ env.guid }}_${{ github.run_id }}
+
 on: [workflow_dispatch]
+
+env:
+    guid: '00000000-0000-0000-0000-000000000000'
 
 jobs:
     build:
