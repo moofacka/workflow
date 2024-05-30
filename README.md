@@ -2,4 +2,4 @@
 
 Testing workflows and how they work
 
-![example event parameter](https://github.com/moofacka/workflow/workflows/dispatch.yml/badge.svg?event=push)
+![GitHub CI](https://github.com/moofacka/workflow/actions/workflows/dispatch.yml/badge.svg)
