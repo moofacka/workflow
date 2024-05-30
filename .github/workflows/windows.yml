@@ -1,5 +1,5 @@
 name: Windows PowerShell
-run-name: windows-powershell_${{ env.guid }}_${{ github.run_id }}
+run-name: windows-powershell_${{ github.run_id }}
 
 on: [workflow_dispatch]
 
