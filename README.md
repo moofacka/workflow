@@ -7,4 +7,6 @@
 		<img src="https://github.com/moofacka/workflow/actions/workflows/dispatch.yml/badge.svg" /></a>
 </p>
 
+[![GitHub Release](https://img.shields.io/github/release/workflow/PlayMusic.svg?style=flat)]()  
+
 Testing workflows and how they work
