@@ -1,4 +1,4 @@
-# Conditional Access framework and policies
+# Conditional Access framework and policies1
 
 This article provides a framework for implementing a persona-based Conditional Access architecture, like the one described in [Conditional Access Zero Trust architecture](/azure/architecture/guide/security/conditional-access-architecture). In this article, there are details on how to form and name the Conditional Access policies. There's also a starting point for creating policies.
 
