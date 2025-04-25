@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - 'docs/docs/**'
-    - 'docs/mkdocs.yml'
-    - 'docs/overrides/**'
+    - 'docs/**'
+    - 'mkdocs.yml'
+    - 'overrides/**'
     - 'requirements.txt'
     branches:
     - main
