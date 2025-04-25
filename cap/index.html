@@ -1,0 +1,897 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Conditional Access framework and policies1 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link rel="stylesheet" href="../assets/stylesheets/custom.bea7efe8.min.css">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conditional-access-framework-and-policies1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conditional Access framework and policies1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Conditional Access framework and policies1
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conditional Access framework and policies1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conditional Access framework and policies1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming conventions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbering-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numbering scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grant-control-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant control types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named locations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-conditional-access-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Conditional Access policies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming conventions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbering-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numbering scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grant-control-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant control types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Named locations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-conditional-access-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Conditional Access policies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="conditional-access-framework-and-policies1">Conditional Access framework and policies1<a class="headerlink" href="#conditional-access-framework-and-policies1" title="Permanent link">&para;</a></h1>
+<p>This article provides a framework for implementing a persona-based Conditional Access architecture, like the one described in <a href="/azure/architecture/guide/security/conditional-access-architecture">Conditional Access Zero Trust architecture</a>. In this article, there are details on how to form and name the Conditional Access policies. There's also a starting point for creating policies.</p>
+<p>If you don't use a framework like the one provided here, including a naming standard, policies tend to be created over time by different people in an ad-hoc way.
+This can result in policies that overlap. If the person who created a policy is no longer available, it can be difficult for others to know the purpose of the policy.</p>
+<p>Following a structured framework makes it easier to understand the policies. It also makes it easier to cover all scenarios and avoid conflicting policies that are difficult to troubleshoot.</p>
+<h2 id="naming-conventions">Naming conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
+<p>A properly defined naming convention helps you and your colleagues understand the purpose of a policy, which enables easier policy management and troubleshooting. Your naming convention should fit the framework you use to structure your policies.</p>
+<p>The recommended naming policy is based on personas, policy types, and apps. It looks like this:</p>
+<p><strong>\<CANumber>-\<Persona>-\<PolicyType>-\<App>-\<Platform>-\<GrantControl>-\<OptionalDescription></strong></p>
+<p>The components of this name are described here:</p>
+<table>
+<thead>
+<tr>
+<th>Naming component</th>
+<th>Description/Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA Number</td>
+<td>Used to quickly identify Policy Type scope and order. Example: CA001-CA099.</td>
+</tr>
+<tr>
+<td>Persona</td>
+<td>Global, Admins, Internals, Externals, GuestUsers, GuestAdmins, Microsoft365ServiceAccounts, AzureServiceAccounts, CorpServiceAccounts.</td>
+</tr>
+<tr>
+<td>Policy Type</td>
+<td>BaseProtection, AppProtection, DataProtection, IdentityProtection, AttackSurfaceReduction, Compliance.</td>
+</tr>
+<tr>
+<td>App</td>
+<td>AllApps, O365 (for all Office 365 services), EXO (for Exchange Online).</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>AnyPlatform, Unknown, WindowsPhone, macOS, iOS, Android.</td>
+</tr>
+<tr>
+<td>Grant Control</td>
+<td>Block, ADHJ, Compliant, Unmanaged (where unmanaged is specified in the device state condition).</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Optional description of the purpose of the policy.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numbering-scheme">Numbering scheme<a class="headerlink" href="#numbering-scheme" title="Permanent link">&para;</a></h2>
+<p>To make administration easy, we suggest this numbering scheme:</p>
+<table>
+<thead>
+<tr>
+<th>Persona group</th>
+<th>Number allocation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA-Persona-Global</td>
+<td>CA001-CA099</td>
+</tr>
+<tr>
+<td>CA-Persona-Internals</td>
+<td>CA100-CA199</td>
+</tr>
+<tr>
+<td>CA-Persona-Admins</td>
+<td>CA200-CA299</td>
+</tr>
+<tr>
+<td>CA-Persona-Externals</td>
+<td>CA300-CA399</td>
+</tr>
+<tr>
+<td>CA-Persona-GuestUsers</td>
+<td>CA400-CA499</td>
+</tr>
+<tr>
+<td>CA-Persona-GuestAdmins</td>
+<td>CA500-CA599</td>
+</tr>
+<tr>
+<td>CA-Persona-M365ServiceAccounts</td>
+<td>CA600-CA699</td>
+</tr>
+<tr>
+<td>CA-Persona-AzureServiceAccounts</td>
+<td>CA700-CA799</td>
+</tr>
+<tr>
+<td>CA-Persona-CorpServiceAccounts</td>
+<td>CA800-CA899</td>
+</tr>
+<tr>
+<td>CA-Persona-WorkloadIdentities</td>
+<td>CA900-CA999</td>
+</tr>
+<tr>
+<td>CA-Persona-Developers</td>
+<td>CA1000-CA1099</td>
+</tr>
+</tbody>
+</table>
+<h2 id="policy-types">Policy types<a class="headerlink" href="#policy-types" title="Permanent link">&para;</a></h2>
+<p>These are the recommended policy types:</p>
+<table>
+<thead>
+<tr>
+<th>Policy type</th>
+<th>Description/Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseProtection</td>
+<td>For each persona, there's a baseline protection that's covered by this policy type. For users on managed devices, this typically is known user and known device. For external guests, it might be known user and multi-factor authentication.<br><br> The base protection is the default policy for all apps for users in the given persona. If a specific app should have a different policy, exclude that app from the base protection policy and add an explicit policy that targets only that app.<br><br> Example: Assume the base protection for Internals is to require known user and known device for all cloud apps, but you want to allow Outlook on the web from any device. You could exclude Exchange Online from the base protection policy and add a separate policy for Exchange Online, where you require known device OR multi-factor authentication.</td>
+</tr>
+<tr>
+<td>IdentityProtection</td>
+<td>On top of the base protection for each persona, you can have Conditional Access policies that relate to identity.<br><br> Examples: Block legacy authentication, require extra multi-factor authentication for high user or sign-in risk, require known device for multi-factor authentication registration.</td>
+</tr>
+<tr>
+<td>DataProtection</td>
+<td>This policy type indicates delta policies that protect data as an extra layer on top of the base protection. <br><br>Examples: <ul><li>App protection policies for iOS and Android that you can use to encrypt data on a phone and that provide improved protection of that data. (App protection policies also include app protection.) <li> Session policies where Azure Information Protection helps secure data during download if the data is sensitive.</td>
+</tr>
+<tr>
+<td>AppProtection</td>
+<td>This policy type is another addition to the base protection. <br><br>Examples:<ul><li> Assume you want to allow web access to Exchange Online from any device. You could exclude Exchange from the base policy and create a new explicit policy for access to Exchange, where, for example, you allow only read-only access to Exchange Online. <li>Assume you require multi-factor authentication for Microsoft Endpoint Manager enrollment. You could exclude Intune Endpoint Manager enrollment from the base policy and add an app protection policy that requires multi-factor authentication for Endpoint Manager enrollment.</td>
+</tr>
+<tr>
+<td>AttackSurfaceReduction</td>
+<td>The purpose of this type of policy is to mitigate various attacks. <br><br>Examples:<ul><li> If an access attempt comes from an unknown platform, it might be an attempt to bypass Conditional Access policies in which you require a specific platform. You can block requests from unknown platforms to mitigate this risk. <li> Block access to Office 365 services for Azure Administrators or block access to an app for all users if the app is a known to be bad.</td>
+</tr>
+<tr>
+<td>Compliance</td>
+<td>You can use a compliance policy to require a user to view the terms of use for guests who access customer services.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="app">App<a class="headerlink" href="#app" title="Permanent link">&para;</a></h2>
+<p>The following table describes the App component of a policy name:</p>
+<table>
+<thead>
+<tr>
+<th>App name</th>
+<th>Description/Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllApps</td>
+<td>AllApps indicates that all cloud apps are targeted in the Conditional Access policy. All endpoints are covered, including those that support Conditional Access and those that don't. In some scenarios, targeting all apps doesn't work well. We recommend targeting all apps in the base policy so that all endpoints are covered by that policy. New apps that appear in Azure AD will also automatically adhere to the policy.</td>
+</tr>
+<tr>
+<td>\<AppName></td>
+<td>\<AppName> is a placeholder for the name of an app that the policy addresses. Avoid making the name too long.<br><br>Example names: <ul><li>EXO for Exchange Online<li>SPO for SharePoint Online <br><br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="platform-type">Platform type<a class="headerlink" href="#platform-type" title="Permanent link">&para;</a></h2>
+<p>The following table describes the Platform component of a policy name:</p>
+<table>
+<thead>
+<tr>
+<th>Platform type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AnyPlatform</td>
+<td>The policy targets any platform. You typically configure this by selecting <strong>Any Device</strong>. (In Conditional Access policies, both the word <em>platform</em> and the word <em>device</em> are used.)</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>The policy targets Apple iOS platforms.</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>The policy targets Google Android platforms.</td>
+</tr>
+<tr>
+<td>WindowsPhone</td>
+<td>The policy targets Windows Phone platforms.</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>The policy targets the macOS platforms</td>
+</tr>
+<tr>
+<td>iOSAndroid</td>
+<td>The policy targets both iOS and Android platforms.</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>The policy targets any platform not listed previously. You typically configure this by including <strong>Any Device</strong> and excluding all the individual platforms.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grant-control-types">Grant control types<a class="headerlink" href="#grant-control-types" title="Permanent link">&para;</a></h2>
+<p>The following table describes the Grant Control component of a policy name:</p>
+<table>
+<thead>
+<tr>
+<th>Grant type</th>
+<th>Description/Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multi-factor authentication</td>
+<td>The policy requires multi-factor authentication.</td>
+</tr>
+<tr>
+<td>Compliant</td>
+<td>The policy requires a compliant device, as determined by Endpoint Manager, so the device needs to be managed by Endpoint Manager.</td>
+</tr>
+<tr>
+<td>CompliantorAADHJ</td>
+<td>The policy requires a compliant device OR a Hybrid Azure AD joined device. A standard company computer that's domain joined is also Hybrid Azure AD  joined. Mobile phones and Windows 10 computers that are co-managed or Azure AD joined can be compliant.</td>
+</tr>
+<tr>
+<td>CompliantandAADHJ</td>
+<td>The policy requires a device that's compliant AND Hybrid Azure AD joined.</td>
+</tr>
+<tr>
+<td>MFAorCompliant</td>
+<td>The policy requires a compliant device OR multi-factor authentication if it's not compliant.</td>
+</tr>
+<tr>
+<td>MFAandCompliant</td>
+<td>The policy requires a compliant device AND multi-factor authentication.</td>
+</tr>
+<tr>
+<td>MFAorAADHJ</td>
+<td>The policy requires a Hybrid Azure AD joined computer OR multi-factor authentication if it's not a Hybrid Azure AD joined computer.</td>
+</tr>
+<tr>
+<td>MFAandAADHJ</td>
+<td>The policy requires a Hybrid Azure AD joined computer AND multi-factor authentication.</td>
+</tr>
+<tr>
+<td>Unmanaged</td>
+<td>The policy targets devices that aren't known by Azure AD. For example, you can use this grant type to allow access to Exchange Online from any device.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="named-locations">Named locations<a class="headerlink" href="#named-locations" title="Permanent link">&para;</a></h2>
+<p>We recommend that you define these standard locations for use in Conditional Access policies:</p>
+<ul>
+<li><strong>Trusted IPs / Internal networks.</strong> These IP subnets represent locations and networks that have physical access restrictions or other controls in place, like computer system management, network-level authentication, or intrusion detection. These locations are more secure, so Conditional Access enforcement can be relaxed. Consider whether Azure or other datacenter locations (IPs) should be included in this location or have their own named locations.</li>
+<li><strong>Citrix-trusted IPs.</strong> If you have Citrix on-premises, it might be useful to configure separate outgoing IPv4 addresses for the Citrix farms, if you need to be able to connect to cloud services from Citrix sessions. In that case, you can exclude those locations from Conditional Access policies if you need to.</li>
+<li><strong>Zscaler locations, if applicable.</strong> Computers have a ZPA agent installed and forward all traffic to the internet to or through Zscaler cloud. So it's worth defining Zscaler source IPs in Conditional Access and requiring all requests from non-mobile devices to go through Zscaler.</li>
+<li><strong>Countries/regions with which to allow business.</strong> It can be useful to divide countries/regions into two location groups: one that represents areas of the world where employees typically work and one that represents other locations. This allows you to apply additional controls to requests that originate from outside the areas where your organization normally operates.</li>
+<li><strong>Locations where multi-factor authentication might be difficult or impossible.</strong> In some scenarios, requiring multi-factor authentication could make it difficult for employees to do their work. For example, staff might not have the time or opportunity to respond to frequent multi-factor authentication challenges. Or, in some locations, RF screening or electrical interference can make the use of mobile devices difficult. Typically, you'd use other controls in these locations, or they might be trusted.</li>
+</ul>
+<p>Location-based access controls rely on the source IP of a request to determine the location of the user at the time of the request. It's not easy to perform spoofing on the public internet, but protection afforded by network boundaries might be considered less relevant than it once was. We don't recommend relying solely on location as a condition for access. But for some scenarios it might be the best control that you can use, like if you're securing access from a service account from on-premises that's used in a non-interactive scenario.</p>
+<h2 id="recommended-conditional-access-policies">Recommended Conditional Access policies<a class="headerlink" href="#recommended-conditional-access-policies" title="Permanent link">&para;</a></h2>
+<p>We've created a spreadsheet that contains recommended Conditional Access policies. You can <a href="https://github.com/microsoft/ConditionalAccessforZeroTrustResources/raw/main/ConditionalAccessSamplePolicies/Microsoft%20Conditional%20Access%20for%20Zero%20trust%20persona%20based%20policies.xlsx">download the spreadsheet here</a>.</p>
+<p>Use the suggested policies as a starting point.</p>
+<p>Your policies will probably change over time to accommodate use cases that are important to your business. Here are a few examples of scenarios that might require changes:</p>
+<ul>
+<li>Implement read-only access to Exchange Online for employees using any unmanaged device based on multi-factor authentication, app protection, and an approved client app.</li>
+<li>Implement information protection to ensure that sensitive information isn't downloaded without improved protection provided by Azure Information Protection.</li>
+<li>Provide protection against copy and paste by guests.</li>
+</ul>
+<p>Multiple previews are currently going into public preview, so expect updates to the suggested set of Conditional Access (CA) starter policies soon.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="April 25, 2025 15:33:52">2025-04-25 15:33:52</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to MkDocs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Welcome to MkDocs
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script src="../assets/javascripts/custom.a7283b5f.min.js"></script>
+
+  </body>
+</html>
